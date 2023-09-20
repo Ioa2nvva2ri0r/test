@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Test App">
+  <title>Test</title>
+  <!-- Normalize CSS-->
+  <link rel="stylesheet" href="styles/static/normalize_(8.0.1).min.css">
+  <!-- Swiper-Slider-->
+  <link rel="stylesheet" href="styles/static/swiper_(9.3.2).min.css">
+  <script src="js/static/swiper_(9.3.2).min.js" defer></script>
+  <!-- Jquery -->
+  <script src="js/static/jquery_(3.7.0).min.js" defer></script>
+  <!-- Jquery-UI-->
+  <link rel="stylesheet" href="styles/static/jquery-ui_(1.13.2).min.css">
+  <script src="js/static/jquery-ui_(1.13.2).min.js" defer></script>
+  <!-- Basic CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- Basic JavaScript -->
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <p class="desc-mobile desktop">Мобильная версия от 768px</p>
+  <header class="header mobile">
+    <p class="header__desc">
+      <span class="flag">&#x1F1FF;&#x1F1E6; </span>SPECIAL OFFER + FREE DELIVERY 2-4 DAYS IN SA
+      <span class="flag">&#x1F1FF;&#x1F1E6;</span>
+    </p>
+    <a class="header__logo"><img src="img/logo.svg" alt="Logo"></a>
+  </header>
+  <main class="mobile">
+    <div class="hero">
+      <picture>
+        <source class="hero__img" srcset="img/hero.webp">
+        <img class="hero__img" src="img/hero.webp" alt="sale">
+      </picture>
+      <div class="hero__content">
+        <strong class="hero__timer" id="timer"><span class="hero__timer--title">Limited offer</span><span
+            class="hero__timer--time"> </span></strong><strong class="hero__sale" id="sale">
+          <span class="hero__sale--old"> </span><span class="hero__sale--new"> </span></strong>
+      </div>
+    </div>
+    <section class="products container">
+      <div class="products__header">
+        <strong class="products__rating"><span>Excellent </span><span>4.8/5</span></strong>
+        <svg width="72" height="18" fill="none">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg><a class="products__link" href="#" rel="noreferrer">best selling</a>
+      </div>
+      <h2 class="products__title">Orthopedic Slippers</h2>
+      <div class="products__slider swiper">
+        <div class="products__slider-wrapper swiper-wrapper">
+          <div class="products__slide swiper-slide">
+            <picture>
+              <source class="products__slide-img" srcset="img/products/1.webp">
+              <img class="products__slide-img" src="img/products/1.webp" alt="black">
+            </picture>
+          </div>
+          <div class="products__slide swiper-slide">
+            <picture>
+              <source class="products__slide-img" srcset="img/products/2.webp">
+              <img class="products__slide-img" src="img/products/2.webp" alt="orange">
+            </picture>
+          </div>
+          <div class="products__slide swiper-slide">
+            <picture>
+              <source class="products__slide-img" srcset="img/products/3.webp">
+              <img class="products__slide-img" src="img/products/3.webp" alt="pink">
+            </picture>
+          </div>
+          <div class="products__slide swiper-slide">
+            <picture>
+              <source class="products__slide-img" srcset="img/products/4.webp">
+              <img class="products__slide-img" src="img/products/4.webp" alt="yellow">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <ul class="products__tabs">
+        <li class="products__tab">
+          <button class="products__tab-btn active" data-tab="black">
+            <img class="products__tab-img" src="img/products/1.webp" alt="black">
+          </button>
+        </li>
+        <li class="products__tab">
+          <button class="products__tab-btn" data-tab="orange">
+            <img class="products__tab-img" src="img/products/2.webp" alt="orange">
+          </button>
+        </li>
+        <li class="products__tab">
+          <button class="products__tab-btn" data-tab="pink">
+            <img class="products__tab-img" src="img/products/3.webp" alt="pink">
+          </button>
+        </li>
+        <li class="products__tab">
+          <button class="products__tab-btn" data-tab="yellow">
+            <img class="products__tab-img" src="img/products/4.webp" alt="yellow">
+          </button>
+        </li>
+      </ul>
+      <div class="products__content">
+        <p class="products__desc">
+          <strong class="products__delivery"> Fast Delivery: <span>2-4 days from SA
+              &#127487;&#127462;</span></strong><strong class="products__stock">
+            In Stock: <span>Shipping from Johannesburg &#127487;&#127462;</span></strong>
+        </p>
+        <strong class="products__stars" aria-label="rating" role="note"><span class="products__stars--icon">
+            <svg width="14" height="13" fill="none">
+              <use xlink:href="img/sprite.svg#stars"></use>
+            </svg>
+            <svg width="14" height="13" fill="none">
+              <use xlink:href="img/sprite.svg#stars"></use>
+            </svg>
+            <svg width="14" height="13" fill="none">
+              <use xlink:href="img/sprite.svg#stars"></use>
+            </svg>
+            <svg width="14" height="13" fill="none">
+              <use xlink:href="img/sprite.svg#stars"></use>
+            </svg>
+            <svg width="14" height="13" fill="none">
+              <use xlink:href="img/sprite.svg#stars"></use>
+            </svg></span><span class="products__stars--count">(10)</span></strong>
+      </div>
+      <form class="products__form">
+        <div class="products__form-box">
+          <label class="products__select-label" for="color"><span class="desc">color</span>
+            <select class="products__select" id="color" name="color">
+              <option value="">color</option>
+              <option value="black">black</option>
+              <option value="orange">orange</option>
+              <option value="pink">pink</option>
+              <option value="yellow">yellow</option>
+            </select>
+          </label>
+          <label class="products__select-label" for="size"><span class="desc">size</span>
+            <select class="products__select" id="size" name="size">
+              <option value="">size</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+        </div>
+        <a class="products__form-btn" href="https://www.youtube.com/" rel="noreferrer">buy now </a>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
